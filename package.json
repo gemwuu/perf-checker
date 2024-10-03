@@ -1,6 +1,6 @@
 {
   "name": "perf-checker",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "perf checker for browser",
   "main": "./dist/commonjs/index.js",
   "files": [
