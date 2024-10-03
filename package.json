@@ -1,0 +1,59 @@
+{
+  "name": "perf-checker",
+  "version": "0.0.1",
+  "description": "perf checker for browser",
+  "main": "./dist/commonjs/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "prepare": "tshy",
+    "pub": "standard-version"
+  },
+  "devDependencies": {
+    "standard-version": "^9.5.0",
+    "tshy": "^3.0.2",
+    "typescript": "^5.6.2"
+  },
+  "type": "module",
+  "tshy": {
+    "exports": {
+      "./package.json": "./package.json",
+      ".": "./src/index.ts"
+    }
+  },
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "import": {
+        "types": "./dist/esm/index.d.ts",
+        "default": "./dist/esm/index.js"
+      },
+      "require": {
+        "types": "./dist/commonjs/index.d.ts",
+        "default": "./dist/commonjs/index.js"
+      }
+    }
+  },
+  "types": "./dist/commonjs/index.d.ts",
+  "module": "./dist/esm/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/gemwuu/perf-checker.git"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "keywords": [
+    "perf",
+    "checker",
+    "browser"
+  ],
+  "author": "gemwuu@163.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gemwuu/perf-checker/issues"
+  },
+  "homepage": "https://github.com/gemwuu/perf-checker#readme"
+}
