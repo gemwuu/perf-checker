@@ -8,7 +8,8 @@
   ],
   "scripts": {
     "prepare": "tshy",
-    "pub": "standard-version"
+    "prepublishOnly": "echo \"Generating changelog...\"; standard-version",
+    "postpublish": "echo \"Pushing changelog commit...\"; git push"
   },
   "devDependencies": {
     "standard-version": "^9.5.0",
